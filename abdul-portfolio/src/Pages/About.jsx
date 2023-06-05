@@ -1,7 +1,0 @@
-import React from 'react'
-
-export const About = () => {
-  return (
-    <section id="about" className="about section">About</section>
-  )
-}
