@@ -2,38 +2,38 @@ import React from "react";
 
 const NavMenu = () => {
   return (
-    <nvb id="nav-menu">
+    <nav id="nav-menu">
       <div id="nav-logo">Abdul</div>
       <div id="nav-header">
         <ul id="nav-links">
           <li>
-            <a class="nav-link home" href="#home">
+            <a className="nav-link home" href="#home">
               Home
             </a>
           </li>
           <li>
-            <a class="nav-link about" href="#about">
+            <a className="nav-link about" href= "#about">
               About
             </a>
           </li>
           <li>
-            <a class="nav-link skills" href="#skills">
+            <a className="nav-link skills" href="#skills">
               Skills
             </a>
           </li>
           <li>
-            <a class="nav-link projects" href="#projects">
+            <a className="nav-link projects" href="#projects">
               Projects
             </a>
           </li>
           <li>
-            <a class="nav-link contact" href="#contact">
+            <a className="nav-link contact" href="#contact">
               Contact
             </a>
           </li>
           <li>
             <a
-              class="nav-link resume"
+              className="nav-link resume"
               id="resume-button-1"
               download
               target="_blank"
@@ -44,7 +44,7 @@ const NavMenu = () => {
           </li>
         </ul>
       </div>
-    </nvb>
+    </nav>
   );
 };
 
