@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NavMenu from "./components/NavMenu";
 
 function App() {
   return (
     <div className="App">
-     hello form abdul
+      <NavMenu />
     </div>
   );
 }
