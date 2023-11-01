@@ -1,15 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.4c55e901.css",
-    "main.js": "/static/js/main.07730bcd.js",
+    "main.js": "/static/js/main.38c4ed3f.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
+    "static/media/HomeImage.gif": "/static/media/HomeImage.1ea1501b793c2d8b96f8.gif",
+    "static/media/Md_Abdul_Qadir_Resume.pdf.pdf": "/static/media/Md_Abdul_Qadir_Resume.pdf.c58d018614820c4e6547.pdf",
+    "static/media/abdulreminpic.jpeg": "/static/media/abdulreminpic.01f7130fb90dffb54fd0.jpeg",
     "index.html": "/index.html",
     "main.4c55e901.css.map": "/static/css/main.4c55e901.css.map",
-    "main.07730bcd.js.map": "/static/js/main.07730bcd.js.map",
+    "main.38c4ed3f.js.map": "/static/js/main.38c4ed3f.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4c55e901.css",
-    "static/js/main.07730bcd.js"
+    "static/js/main.38c4ed3f.js"
   ]
 }
