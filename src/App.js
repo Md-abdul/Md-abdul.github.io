@@ -4,6 +4,8 @@ import { Home } from "./components/Home";
 import  Navbar  from "./components/Navbar";
 import Skill from "./components/Skill";
 import Projects from "./components/Projects"
+import  Contact  from "./components/Contact";
+import GithubStatus from "./components/GithubStatus";
 function App() {
   return (
     <div className="App">
@@ -23,8 +25,8 @@ function App() {
       <Skill/>
       <customElements/>
       <Projects/>
-
-
+      <GithubStatus/>
+        <Contact/>
       <br />
       <br /><br /><br /><br />
     </div>
