@@ -43,7 +43,7 @@ const ProjectCard = (props) => {
             as="a"
             href={githubLink}
             target="_blank"
-            className="project-link"
+            className="project-github-link"
           >
             <FaGithub /> GitHub
           </Button>
@@ -51,7 +51,7 @@ const ProjectCard = (props) => {
             as="a"
             href={deployedLink}
             target="_blank"
-            className="project-link"
+            className="project-deployed-link"
           >
             <FaExternalLinkAlt /> Deployed
           </Button>
