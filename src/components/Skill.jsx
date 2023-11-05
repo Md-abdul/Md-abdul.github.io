@@ -11,6 +11,9 @@ import mongooseImg from "../assets/mongoose-1.svg";
 import chakraUIImg from "../assets/chakraui_logo.png";
 import gitImg from "../assets/github.svg";
 import postmanImg from "../assets/postman.svg";
+import angular from "../assets/angular.png";
+import axios from "../assets/axios.png";
+import routerDom from "../assets/react-router-dom.png";
 
 const Skill = () => {
   return (
@@ -19,7 +22,6 @@ const Skill = () => {
       p="15"
       w={{ base: "100%", lg: "80%", md: "50%" }}
       m={"auto"}
-      style={{ border: "1px solid" }}
       mt={59}
     >
       <Heading
@@ -40,7 +42,7 @@ const Skill = () => {
             margin={"auto"}
             width={["40%", "25%", "15%"]} // Adjust the width for different screen sizes
             p="4"
-            style={{ border: "1px solid" }}
+            // style={{ border: "1px solid" }}
             mt={5}
             borderRadius={"50"}
           >
@@ -50,6 +52,10 @@ const Skill = () => {
               alt={`Skill ${index + 1}`}
               mx="auto"
               boxSize="100px"
+              boxShadow={'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px'}
+              p={2}
+              borderRadius={30}
+              // box-shadow: ;
             />
             <Text className="skills-card-name" textAlign="center" mt="2">
               {skill.name}
@@ -67,11 +73,14 @@ const skillsData = [
   { name: "HTML", icon: htmlImg },
   { name: "CSS", icon: cssImg },
   { name: "JavaScript", icon: javascriptImg },
+  {name: "Angular", icon:angular},
   { name: "React", icon: reactImg },
   { name: "Redux", icon: reduxImg },
+  { name: "React-Router-Dom", icon: routerDom },
   { name: "Mongo DB", icon: mongodbImg },
   { name: "Node.js", icon: nodejsImg },
   { name: "Mongoose", icon: mongooseImg },
+  {name: "Axios" , icon: axios},
   { name: "Chakra UI", icon: chakraUIImg },
   { name: "GIT", icon: gitImg },
   { name: "Postman", icon: postmanImg },

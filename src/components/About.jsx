@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Flex, Image, Text, Button } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import profileImage from "../assets/abdulreminpic.jpeg";
-import Md_Abdul_Resume from "../assets/Md_Abdul_Qadir_Resume.pdf.pdf"
+
 const About = () => {
   return (
     <>
@@ -66,7 +66,6 @@ const About = () => {
           </Text>
         </Box>
       </Flex>
-      
     </>
   );
 };
