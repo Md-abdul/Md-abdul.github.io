@@ -21,11 +21,14 @@ function Navbar() {
   };
 
   return (
-    <header id="nav-menu">
+    <header id="nav-menu" style={{ border: "1px solid" }}>
       <div>
         <h1>{Logo}</h1>
       </div>
-      <nav id="nav-header" ref={navRef}>
+      <nav
+        id="nav-header"
+        ref={navRef}
+      >
         <Link
           onClick={() => setName("Home")}
           className="nav-link home"

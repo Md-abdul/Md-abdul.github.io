@@ -17,7 +17,7 @@
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 80px;
   padding: 0 2rem;
   background-color: var(--mainColor);
@@ -28,7 +28,10 @@ nav a {
   margin: 0 1rem;
   color: var(--textColor);
   text-decoration: none;
+}
 
+.nav-links {
+  text-align: right;
 }
 
 nav a:hover {

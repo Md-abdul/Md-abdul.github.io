@@ -6,10 +6,12 @@ import Skill from "./components/Skill";
 import Projects from "./components/Projects"
 import  Contact  from "./components/Contact";
 import GithubStatus from "./components/GithubStatus";
+import NavMenu from "./components/NavMenu";
 function App() {
   return (
     <div className="App">
       <Navbar/>
+      {/* <NavMenu/> */}
       <Home/>
       <hr style={{
           width: "60%",
