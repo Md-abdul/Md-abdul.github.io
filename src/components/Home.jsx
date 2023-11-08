@@ -49,7 +49,7 @@ export const Home = () => {
         align={"center"}
         justify={"center"}
         gap={50}
-        mt={{base:"100px", md:'180px',lg:'-12px', sm:'100px'}}
+        mt={{base:"10px", md:'180px',lg:'-12px', sm:'-300px'}}
         flexDir={{ base: "column-reverse", lg: "row" }}
         ml={{ lg: "20px" }}
         // mt={{md:'100px', sm:'30px'}}

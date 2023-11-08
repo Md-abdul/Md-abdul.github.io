@@ -169,7 +169,7 @@ const Projects = () => {
           techStack="JavaScript, HTML, CSS"
           projectType="Team Project"
           githubLink="https://github.com/Md-abdul/gaping-spring-1880"
-          deployedLink="https://648ff31438df292dda152224--animated-raindrop-fbd2bc.netlify.app"
+          deployedLink="https://648ff31438df292dda152224--animated-raindrop-fbd2bc.netlify.app/"
         />
         {/* Repeat the above code for other projects */}
       </Flex>

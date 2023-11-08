@@ -13,17 +13,19 @@ function Navbar() {
     navRef.current.classList.toggle("responsive_nav");
   };
 
-  const openResumeInNewTab = () => {
-    window.open(
-      "https://drive.google.com/file/d/1kPQzRRLng5ZdCBcira_ARtw0-eWzXYdL/view?usp=sharing",
-      "_blank"
-    );
-  };
-
   return (
     <header id="nav-menu" style={{ border: "1px solid" }}>
       <div>
-        <h1>{Logo}</h1>
+        <h1
+          style={{
+            fontSize: "40px",
+            fontWeight: "700",
+              color:'linear-gradient(to right, #76a8dd, #00ff00, #ff0000)'
+          }}
+          className="gradient-text"
+        >
+          {Logo}
+        </h1>
       </div>
       <nav id="nav-header" ref={navRef}>
         <Link
@@ -61,16 +63,6 @@ function Navbar() {
         >
           contact
         </Link>
-        {/* <Button
-          id="resume-button-1"
-          className="nav-link resume"
-          onClick={() => {
-            window.open("https://drive.google.com/file/d/1kPQzRRLng5ZdCBcira_ARtw0-eWzXYdL/view?usp=sharing","_blank");
-          }}
-        >
-          <a id="resume-link-1" href={Md_Abdul_Qadir_Resume} target="_blank" download="Md_Abdul_Qadir_Resume.pdf"></a>
-          Resume
-        </Button> */}
 
         <Button
           id="resume-button-1"
