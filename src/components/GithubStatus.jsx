@@ -1,59 +1,3 @@
-// import React from "react";
-// import { Box, Text, Container, Image, Flex } from "@chakra-ui/react";
-// import GithubCalender from "react-github-calendar";
-
-// const GithubStats = () => {
-//   return (
-//     <Container id="github-stats" p={4} textAlign="center" mt={20}>
-//       <Text as="h4" fontSize="40px">
-//         GitHub Stats
-//       </Text>
-//       <Flex className="container" justifyContent="center" width="100%" mt={4}>
-//         <Box id="img1">
-//           <Image
-//             id="github-top-langs"
-//             src="https://github-readme-stats.vercel.app/api/top-langs/?username=Md-abdul&layout=compact"
-//             alt="GitHub Streak Stats"
-//             width="700px"
-//             height="300px"
-//             mt={4}
-//           />
-//         </Box>
-//         <Box id="img2">
-//           <Image
-//             id="github-streak-stats"
-//             src="https://github-readme-streak-stats.herokuapp.com/?user=Md-abdul"
-//             alt="GitHub Top Languages"
-//             width="500px"
-//           />
-//           <Image
-//             id="github-stats-card"
-//             src="https://github-readme-stats.vercel.app/api?username=Md-abdul&show_icons=true&count_private=true&hide=prs,issues,contribs"
-//             alt="GitHub Stats card"
-//             width="500px"
-//             mt={4}
-//           />
-//         </Box>
-//       </Flex>
-//       <Box
-//         className="react-activity-calendar"
-//         mt={4}
-//         border={"1px solid"}
-//         w={"60%"}
-//         justifyContent={"center"}
-//       >
-//         <GithubCalender
-//           username="Md-abdul"
-//           className="react-activity-calender"
-//           w={"100%"}
-//         />
-//       </Box>
-//     </Container>
-//   );
-// };
-
-// export default GithubStats;
-
 import React from "react";
 import { Box, Text, Container, Image, Flex } from "@chakra-ui/react";
 import GithubCalendar from "react-github-calendar";
@@ -94,7 +38,7 @@ const GithubStats = () => {
         >
           <Image
             id="github-streak-stats"
-            src="https://github-readme-streak-stats.herokuapp.com/?user=Md-abdul"
+            src="https://github-readme-streak-stats.herokuapp.com/?user=md-abdul"
             alt="GitHub Streak Stats"
             width="100%"
             height="auto"
