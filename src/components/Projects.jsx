@@ -162,7 +162,7 @@ const Projects = () => {
           deployedLink="https://tech-probe-interview-prep.netlify.app/"
         />
 
-        <ProjectCard
+        {/* <ProjectCard
           imageSrc={alphafinence}
           projectTitle="Alpha Finence"
           projectDescription="Lets you see the balance, transactions and invoices for your credit cards. This app simplifies your life. You can for instance: Get notifications of important events, purchases or if you reached your spending limits."
@@ -170,7 +170,7 @@ const Projects = () => {
           projectType="Team Project"
           githubLink="https://github.com/Md-abdul/gaping-spring-1880"
           deployedLink="https://648ff31438df292dda152224--animated-raindrop-fbd2bc.netlify.app/"
-        />
+        /> */}
         {/* Repeat the above code for other projects */}
       </Flex>
     </section>

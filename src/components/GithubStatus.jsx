@@ -54,8 +54,6 @@
 
 // export default GithubStats;
 
-
-
 import React from "react";
 import { Box, Text, Container, Image, Flex } from "@chakra-ui/react";
 import GithubCalendar from "react-github-calendar";
@@ -73,7 +71,7 @@ const GithubStats = () => {
         mt={20}
         w={{ base: "100%", md: "60%" }}
         // ml={'19%'}
-        ml={{lg:'19%'}}
+        ml={{ lg: "19%" }}
       >
         <Box
           id="img1"
