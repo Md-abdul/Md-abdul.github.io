@@ -29,6 +29,22 @@ const About = () => {
         gap={{ lg: "-100" }}
       >
         <Box
+          data-aos="fade-right"
+          width={{ base: "100%", md: "50%", lg: "35%" }}
+          marginY={{ base: "20px", md: 0 }}
+        >
+          <Image
+            className="home-img"
+            margin="auto"
+            border="2px solid grey"
+            borderRadius="50%"
+            w={{ base: 200, md: 300 }}
+            h={{ base: 200, md: 300 }}
+            src={profileImage}
+            alt="User Profile"
+          />
+        </Box>
+        <Box
           padding={{ base: "20px", md: "40px", lg: "50px" }}
           marginY={{ base: "20px", md: "20px", lg: "0px" }}
           alignItems="center"
@@ -48,22 +64,6 @@ const About = () => {
             a dynamic and effective approach to software development, delivering
             impactful user experiences.
           </Text>
-        </Box>
-        <Box
-          data-aos="fade-right"
-          width={{ base: "100%", md: "50%", lg: "35%" }}
-          marginY={{ base: "20px", md: 0 }}
-        >
-          <Image
-            className="home-img"
-            margin="auto"
-            border="2px solid grey"
-            borderRadius="50%"
-            w={{ base: 200, md: 300 }}
-            h={{ base: 200, md: 300 }}
-            src={profileImage}
-            alt="User Profile"
-          />
         </Box>
       </Flex>
     </>

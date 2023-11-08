@@ -20,8 +20,13 @@ header {
   justify-content: space-around;
   height: 80px;
   padding: 0 2rem;
-  background-color: var(--mainColor);
+  background-color: var(--mainColorLight);
   color: var(--textColor);
+  z-index: 10;
+  overflow: hidden;
+  top: 0;
+  position: fixed;
+  width: 100%;
 }
 
 nav a {
@@ -55,6 +60,46 @@ nav {
   display: flex;
   align-items: center;
 }
+
+nav a {
+  margin: 0 1rem;
+  color: var(--textColor);
+  text-decoration: none;
+  font-size: 1.5rem; /* Increase font size */
+  position: relative; /* Add relative position for hover effect */
+}
+
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Set initial width to 0 */
+  height: 2px; /* Line thickness */
+  /* background: linear-gradient(to right, #007bff, #00ff00, #ff0000); Color at the end of the animation */
+  transition: width 0.9s; /* Transition width property */
+}
+
+nav a:hover::after {
+  height: 10px solid;
+  width: 100%; /* Increase width to 100% on hover */
+  background: linear-gradient(to right, #007bff, #00ff00, #ff0000); /* Make it transparent at the start of the animation */
+}
+
+#resume-button-1 {
+  border-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  transition: all 150ms ease-in-out;
+  padding: 10px 20px;
+  border-radius: 10px;
+
+  &:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  }
+}
+
 
 @media only screen and (max-width: 999px) {
   header .nav-btn {
