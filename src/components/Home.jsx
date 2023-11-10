@@ -1,5 +1,5 @@
 import '../style/home.css'
-import Md_Abdul_Qadir_Resume from "../resume/Md Abdul Qadir-Full Stack Web Developer (1).pdf";
+import Md_Abdul_Qadir_Resume from "../resume/Md_Abdul_Qadir_Resume.pdf";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import {
@@ -14,7 +14,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import homeImage from "../assets/HomeImage.gif";
-const rotatingText = "Full Stack Web Developer";
+const rotatingText = "ull Stack Web Developer";
 
 
 export const Home = () => {
@@ -49,7 +49,7 @@ export const Home = () => {
         align={"center"}
         justify={"center"}
         gap={50}
-        mt={{base:"60px", md:'180px',lg:'-12px', sm:'-300px'}}
+        mt={{base:"60px", md:'580px',lg:'-12px', sm:'300px'}}
         flexDir={{ base: "column-reverse", lg: "row" }}
         ml={{ lg: "20px" }}
         // mt={{md:'100px', sm:'30px'}}
@@ -69,7 +69,7 @@ export const Home = () => {
             Hi, I am Md Abdul Qadir
           </Heading>
           <Text fontSize={isSmallScreen ? "lg" : "2xl"} fontWeight={"semibold"}>
-            {text}
+            F{text} !!
           </Text>
           <Text fontSize={"xl"} fontWeight={"extrabold"}>
             Detail-orientated full-stack web developer, who loves working with
@@ -87,7 +87,7 @@ export const Home = () => {
               onClick={() => {
                 // Open the resume in a new tab
                 window.open(
-                  "https://drive.google.com/file/d/1kPQzRRLng5ZdCBcira_ARtw0-eWzXYdL/view?usp=sharing",
+                  "https://drive.google.com/file/d/10LULZvVQnCleQXTGR8Ie65bKWkjpeeI0/view?usp=sharing",
                   "_blank"
                 );
 

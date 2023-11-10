@@ -127,7 +127,7 @@ nav a:hover::after {
     justify-content: center;
     gap: 1.5rem;
     background-color: var(--mainColor);
-    transition: 2s;
+    transition: 1.8s;
   }
 
   header .responsive_nav {

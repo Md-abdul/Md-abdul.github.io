@@ -7,6 +7,7 @@ import Projects from "./components/Projects"
 import  Contact  from "./components/Contact";
 import GithubStatus from "./components/GithubStatus";
 import NavMenu from "./components/NavMenu";
+import EducationComponent from "./components/EducationComponent";
 function App() {
   return (
     <div className="App">
@@ -27,6 +28,7 @@ function App() {
       <Skill/>
       <customElements/>
       <Projects/>
+      {/* <EducationComponent/> */}
       <GithubStatus/>
         <Contact/>
       <br />

@@ -5,7 +5,15 @@ import GithubCalendar from "react-github-calendar";
 const GithubStats = () => {
   return (
     <Container id="github-stats" p={4} textAlign="center" mt={20}>
-      <Text as="h4" fontSize="40px" mt={20}>
+      <Text
+        as="h4"
+        // fontSize="40px"
+        mt={20}
+        mb="4"
+        fontSize={{ base: "3xl", md: "4xl" }}
+        fontWeight="600"
+        textAlign="center"
+      >
         GitHub Stats
       </Text>
       <Flex
@@ -29,6 +37,8 @@ const GithubStats = () => {
             alt="GitHub Top Languages"
             width="100%"
             height="auto"
+            boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px"}
+            //box-shadow: ;
           />
         </Box>
         <Box
@@ -42,6 +52,9 @@ const GithubStats = () => {
             alt="GitHub Streak Stats"
             width="100%"
             height="auto"
+            boxShadow={
+              "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
+            }
           />
           <Image
             id="github-stats-card"
@@ -50,6 +63,9 @@ const GithubStats = () => {
             width="100%"
             height="auto"
             mt={4}
+            boxShadow={
+              "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
+            }
           />
         </Box>
       </Flex>
@@ -59,6 +75,10 @@ const GithubStats = () => {
         w={{ base: "100%", md: "60%" }}
         mx="auto"
         justifyContent="center"
+        boxShadow={
+          "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"
+        }
+        p={2}
       >
         <GithubCalendar
           username="Md-abdul"

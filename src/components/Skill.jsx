@@ -14,6 +14,9 @@ import postmanImg from "../assets/postman.svg";
 import angular from "../assets/angular.png";
 import axios from "../assets/axios.png";
 import routerDom from "../assets/react-router-dom.png";
+import typeScript from "../assets/typescript-2.svg";
+import vscode from "../assets/visual-studio-code-1.svg";
+import styledcomponent from "../assets/atom.png";
 
 const Skill = () => {
   return (
@@ -73,6 +76,7 @@ const skillsData = [
   { name: "HTML", icon: htmlImg },
   { name: "CSS", icon: cssImg },
   { name: "JavaScript", icon: javascriptImg },
+  { name: "TypeScript", icon: typeScript },
   {name: "Angular", icon:angular},
   { name: "React", icon: reactImg },
   { name: "Redux", icon: reduxImg },
@@ -82,6 +86,9 @@ const skillsData = [
   { name: "Mongoose", icon: mongooseImg },
   {name: "Axios" , icon: axios},
   { name: "Chakra UI", icon: chakraUIImg },
+  { name: "Styled Component", icon: styledcomponent },
   { name: "GIT", icon: gitImg },
   { name: "Postman", icon: postmanImg },
+  { name: "VsCode", icon: vscode },
+  
 ];

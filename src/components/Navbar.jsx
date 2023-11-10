@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../style/Nav.css";
 import { Button, Link, Text } from "@chakra-ui/react";
-import Md_Abdul_Qadir_Resume from "../resume/Md Abdul Qadir-Full Stack Web Developer (1).pdf";
+import Md_Abdul_Qadir_Resume from "../resume/Md_Abdul_Qadir_Resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 
 function Navbar() {
@@ -70,7 +70,7 @@ function Navbar() {
           onClick={() => {
             // Open the resume in a new tab
             window.open(
-              "https://drive.google.com/file/d/1kPQzRRLng5ZdCBcira_ARtw0-eWzXYdL/view?usp=sharing",
+              "https://drive.google.com/file/d/10LULZvVQnCleQXTGR8Ie65bKWkjpeeI0/view?usp=sharing",
               "_blank"
             );
 
