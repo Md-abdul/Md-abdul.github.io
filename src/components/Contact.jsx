@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Text, Flex, Link, Icon, Tooltip } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaPhone, FaEnvelope } from "react-icons/fa";
-
 const Contact = () => {
   return (
     <Box id="contact" p={4} textAlign="center">
@@ -67,4 +66,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contact

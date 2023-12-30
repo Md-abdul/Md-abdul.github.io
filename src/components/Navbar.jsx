@@ -1,26 +1,30 @@
 import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../style/Nav.css";
-import { Button, Link, Text } from "@chakra-ui/react";
-import Md_Abdul_Qadir_Resume from "../resume/Md_Abdul_Qadir_Resume.pdf";
+import { useColorMode, Button, Link } from "@chakra-ui/react";
+import Md_Abdul_Qadir_Resume from "../resume/Md_Abdul_Qadir_Resume.pdf.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
+import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
+import { PiSunLight } from "react-icons/pi";
 
 function Navbar() {
   const navRef = useRef();
   const [Name, setName] = useState("Home");
   const Logo = "< Abdul />";
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isDarkMode = colorMode === "dark";
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
 
   return (
-    <header id="nav-menu" style={{ border: "1px solid" }}>
+    <header id="nav-menu" data-theme={isDarkMode ? "dark" : "light"}>
       <div>
         <h1
           style={{
             fontSize: "40px",
             fontWeight: "700",
-              color:'linear-gradient(to right, #76a8dd, #00ff00, #ff0000)'
+            color: "linear-gradient(to right, #76a8dd, #00ff00, #ff0000)",
           }}
           className="gradient-text"
         >
@@ -30,35 +34,48 @@ function Navbar() {
       <nav id="nav-header" ref={navRef}>
         <Link
           onClick={() => setName("Home")}
-          className="nav-link home"
+          // className="nav-link home"
+          className={`nav-link home ${isDarkMode ? "dark-link" : "light-link"}`}
           href="#home"
         >
           home
         </Link>
         <Link
           onClick={() => setName("About")}
-          className="nav-link about"
+          // className="nav-link about"
+          className={`nav-link about ${
+            isDarkMode ? "dark-link" : "light-link"
+          }`}
           href="#about"
         >
           about
         </Link>
         <Link
           onClick={() => setName("Skills")}
-          className="nav-link skills"
+          // className="nav-link skills"
+          className={`nav-link skills ${
+            isDarkMode ? "dark-link" : "light-link"
+          }`}
           href="#skills"
         >
           skills
         </Link>
         <Link
           onClick={() => setName("Projects")}
-          className="nav-link projects"
+          // className="nav-link projects"
+          className={`nav-link projects ${
+            isDarkMode ? "dark-link" : "light-link"
+          }`}
           href="#projects"
         >
           projects
         </Link>
         <Link
           onClick={() => setName("Contact")}
-          className="nav-link contact"
+          // className="nav-link contact"
+          className={`nav-link contact ${
+            isDarkMode ? "dark-link" : "light-link"
+          }`}
           href="#contact"
         >
           contact
@@ -70,7 +87,7 @@ function Navbar() {
           onClick={() => {
             // Open the resume in a new tab
             window.open(
-              "https://drive.google.com/file/d/10LULZvVQnCleQXTGR8Ie65bKWkjpeeI0/view?usp=sharing",
+              "https://drive.google.com/file/d/1M-rXFMO-O_nrT32l0ZAJa1H-iU3tI2Ub/view?usp=sharing",
               "_blank"
             );
 
@@ -84,7 +101,29 @@ function Navbar() {
             document.body.removeChild(link);
           }}
         >
-          Resume
+          <span>Click !!</span>
+          <span>Resume</span>
+          <AiOutlineDownload style={{ marginLeft: "8px", fontSize: "20px" }} />
+        </Button>
+
+        <Button
+          onClick={toggleColorMode}
+          className="nav-link theme-toggle"
+          border={"1px solid"}
+          w={12}
+          h={10}
+          // backgroundColor={'166, 164, 161'} // 209, 204, 201
+          style={{
+            border: "none",
+            borderRadius: "8px",
+            backgroundColor: colorMode === "light" ? 'rgba(218, 227, 237)' : '#1a202c',
+          }}
+        >
+          {colorMode === "light" ? (
+            <IoMoonOutline width={"100%"} />
+          ) : (
+            <PiSunLight boxSize={8} />
+          )}
         </Button>
 
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>

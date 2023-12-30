@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Heading, Text, Flex, Button, Image } from "@chakra-ui/react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import peppfry from "../assets/peppfry.png";
@@ -8,6 +8,9 @@ import briks99 from "../assets/briks99.png";
 import techprob from "../assets/techprob.png";
 import trello from "../assets/trellow.png";
 import alphafinence from "../assets/alphafinence.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const ProjectCard = (props) => {
   const {
@@ -26,74 +29,106 @@ const ProjectCard = (props) => {
       p={4}
       // border={"1px solid"}
       mt={{ base: "25px", lg: "15px", md: "15px", sm: "50px" }}
-      borderRadius={'25px'}
+      borderRadius={"25px"}
+      textAlign="center"
+      // 
+      data-aos="flip-right"
     >
-      <Box borderRadius={'10px'} p={2} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'} >
-      <Box w={"100%"}>
-        <Image
-          src={imageSrc}
-          alt={projectTitle}
-          boxShadow={
-            "rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px"
-          }
-          borderRadius={10}
-        />
-      </Box>
+      <Box
+        borderRadius={"10px"}
+        p={2}
+        boxShadow="-2px -2px 5px #fff, 2px 2px 5px #babecc"
+      >
+        <Box w={"100%"}>
+          <Image
+            src={imageSrc}
+            alt={projectTitle}
+            boxShadow =  "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset"
+            // boxShadow=" inset 0 0 0.5px 1px hsla(0, 0%,  
+            // 100%, 0.075),
+            // /* shadow ring 👇 */
+            // 0 0 0 1px hsla(0, 0%, 0%, 0.05),
+            // /* multiple soft shadows 👇 */
+            // 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+            // 0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+            // 0 3.5px 6px hsla(0, 0%, 0%, 0.09)"
+            borderRadius={10}
+          />
+        </Box>
 
-      <Box mt={5}>
-        <Heading
-          className="project-title"
-          as="h3"
-          size="lg"
-          fontSize={"3xl"}
-          fontWeight={"bold"}
-        >
-          {projectTitle}
-        </Heading>
-        <Text mt={2} fontSize={'lg'} fontFamily={'sans-serif'}className="project-description">
-          {projectDescription}
-        </Text>
-        <Text mt={3} fontSize={"lg"} color={'green'} fontWeight={'semibold'}className="project-tech-stack">
-          Tech Stack: {techStack}
-        </Text>
-        <Text fontSize={"lg"} color={'red'} fontWeight={'semibold'}>Project Type: {projectType}</Text>
-        <Flex justifyContent="space-evenly" mt={6}>
-          <Button
-            as="a"
-            href={githubLink}
-            target="_blank"
-            className="project-github-link"
-            mb={5}
+        <Box mt={5}>
+          <Heading
+            className="project-title"
+            as="h3"
+            size="lg"
+            fontSize={"3xl"}
+            fontWeight={"bold"}
           >
-            <FaGithub /> GitHub
-          </Button>
-          <Button
-            as="a"
-            href={deployedLink}
-            target="_blank"
-            className="project-deployed-link"
-            mb={5}
+            {projectTitle}
+          </Heading>
+          <Text
+            mt={2}
+            fontSize={"lg"}
+            fontFamily={"sans-serif"}
+            className="project-description"
           >
-            <FaExternalLinkAlt /> Deployed
-          </Button>
-        </Flex>
-      </Box>
+            {projectDescription}
+          </Text>
+          <Text
+            mt={3}
+            fontSize={"lg"}
+            color={"green"}
+            fontWeight={"semibold"}
+            className="project-tech-stack"
+          >
+            Tech Stack: {techStack}
+          </Text>
+          <Text fontSize={"lg"} color={"red"} fontWeight={"semibold"}>
+            Project Type: {projectType}
+          </Text>
+          <Flex justifyContent="space-evenly" mt={6}>
+            <Button
+              as="a"
+              href={githubLink}
+              target="_blank"
+              className="project-github-link"
+              mb={5}
+            >
+              <FaGithub /> GitHub
+            </Button>
+            <Button
+              as="a"
+              href={deployedLink}
+              target="_blank"
+              className="project-deployed-link"
+              mb={5}
+            >
+              <FaExternalLinkAlt /> Deployed
+            </Button>
+          </Flex>
+        </Box>
       </Box>
     </Box>
   );
 };
 
 const Projects = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 2500 });
+  }, [])
+
   return (
     <section id="projects">
       <Heading
         id="project-title"
         as="h4"
-        mt={50}
+        mt={"10%"}
         size="md"
         mb="4"
         fontSize={{ base: "3xl", md: "4xl" }}
         fontWeight="600"
+        textAlign="center"
       >
         Projects
       </Heading>
@@ -106,7 +141,8 @@ const Projects = () => {
         marginLeft={"7.8%"}
         marginRight={"10%"}
         gap={{ base: "15px", lg: "20px", md: "15px", sm: "15px" }}
-        mt={20}
+        mt={35}
+        
       >
         <ProjectCard
           imageSrc={peppfry}

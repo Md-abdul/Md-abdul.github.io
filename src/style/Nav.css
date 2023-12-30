@@ -8,10 +8,14 @@
 }
 
 :root {
-  --mainColor: #29335c;
-  --mainColorLight: #5767aa;
-  --secondaryColor: #db2b39;
-  --textColor: #eee;
+  --mainColor: white; /* Main color for the header */
+  --mainColorLight: #4a5d91; /* Lighter shade of the main color */
+  --secondaryColor: #db2b39; /* Secondary color for hover effects */
+  --textColor: #eee; /* Text color */
+
+  --gradientStart: #3498db; /* Gradient start color */
+  --gradientMiddle: #be7c87; /* Middle color for gradient text */
+  --gradientEnd: #00ff00; /* Gradient end color */
 }
 
 header {
@@ -20,8 +24,9 @@ header {
   justify-content: space-evenly;
   height: 80px;
   padding: 0 2rem;
-  background-color: var(--mainColorLight);
-  color: var(--textColor);
+  /* background-color: white; */
+  color: black;
+  /* font-size: 500px; */
   z-index: 10;
   overflow: hidden;
   top: 0;
@@ -29,9 +34,14 @@ header {
   width: 100%;
 }
 
-
 .gradient-text {
-  background: linear-gradient(to right, #3498db, rgb(190, 124, 135), #00ff00, #ff0000);
+  background: linear-gradient(
+    to right,
+    #3498db,
+    rgb(190, 124, 135),
+    #00ff00,
+    #ff0000
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -39,17 +49,19 @@ header {
 
 nav a {
   margin: 0 1rem;
-  color: var(--textColor);
+  color: black;
   text-decoration: none;
+  /* font-size: 50px; */
 }
 
 .nav-links {
   text-align: right;
+  border: 1px solid;
 }
 
-nav a:hover {
+/* nav a:hover {
   color: var(--secondaryColor);
-}
+} */
 
 header .nav-btn {
   padding: 5px;
@@ -57,7 +69,7 @@ header .nav-btn {
   background: transparent;
   border: none;
   outline: none;
-  color: var(--textColor);
+  /* color: var(--textColor); */
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
@@ -71,12 +83,11 @@ nav {
 
 nav a {
   margin: 0 1rem;
-  color: var(--textColor);
+  color: black;
   text-decoration: none;
   font-size: 1.5rem; /* Increase font size */
   position: relative; /* Add relative position for hover effect */
 }
-
 
 nav a::after {
   content: "";
@@ -92,7 +103,12 @@ nav a::after {
 nav a:hover::after {
   height: 10px solid;
   width: 100%; /* Increase width to 100% on hover */
-  background: linear-gradient(to right, #007bff, #00ff00, #ff0000); /* Make it transparent at the start of the animation */
+  background: linear-gradient(
+    to right,
+    #007bff,
+    #00ff00,
+    #ff0000
+  ); /* Make it transparent at the start of the animation */
 }
 
 #resume-button-1 {
@@ -107,7 +123,6 @@ nav a:hover::after {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
   }
 }
-
 
 @media only screen and (max-width: 999px) {
   header .nav-btn {
@@ -126,8 +141,15 @@ nav a:hover::after {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: var(--mainColor);
     transition: 1.8s;
+    
+    /* Default background color for light mode */
+    background-color: var(--mainColor);
+
+    /* Background color for dark mode */
+    #nav-menu[data-theme='dark'] & {
+      background-color: #1a202c;
+    }
   }
 
   header .responsive_nav {
@@ -142,5 +164,110 @@ nav a:hover::after {
 
   nav a {
     font-size: 1.5rem;
+    color: #1a202c;
+
+    /* Link color for dark mode */
+    #nav-menu[data-theme='dark'] & {
+      color: white;
+    }
   }
+}
+
+/* Light Theme */
+#nav-menu {
+  background-color: white;
+  color: black;
+  /* border: 2px solid; */
+}
+
+/* Dark Theme */
+#nav-menu[data-theme="dark"] {
+  background-color: #1a202c;
+  color: white;
+}
+
+/* Styling for dark links */
+#nav-menu[data-theme="dark"] .dark-link {
+  color: white;
+}
+
+/* Styling for light links */
+#nav-menu[data-theme="light"] .light-link {
+  color: black;
+}
+
+/* ========== Button style ================ */
+#resume-button-1 {
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border: none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+  margin-top: 45px;
+  margin-left: 20px;
+}
+
+#resume-button-1 span {
+  background: rgb(0, 172, 238);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 172, 238, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#resume-button-1 span:nth-child(1) {
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+
+#resume-button-1 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+
+#resume-button-1:hover span:nth-child(1) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+#resume-button-1:hover span:nth-child(2) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1);
+  color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
 }

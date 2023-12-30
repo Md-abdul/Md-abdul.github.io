@@ -1,5 +1,6 @@
-import '../style/home.css'
-import Md_Abdul_Qadir_Resume from "../resume/Md_Abdul_Qadir_Resume.pdf";
+import "../style/home.css";
+import { AiOutlineDownload } from "react-icons/ai";
+import Md_Abdul_Qadir_Resume from "../resume/Md_Abdul_Qadir_Resume.pdf.pdf";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import {
@@ -15,7 +16,6 @@ import {
 } from "@chakra-ui/react";
 import homeImage from "../assets/HomeImage.gif";
 const rotatingText = "ull Stack Web Developer";
-
 
 export const Home = () => {
   const [text, setText] = useState("");
@@ -43,35 +43,36 @@ export const Home = () => {
   return (
     <div>
       <Flex
-        h={{ base: "80vh", lg: "100vh" }}
+        // h={{ base: "80vh", lg: "100vh" }}
         mb={-20}
         id="home"
         align={"center"}
         justify={"center"}
-        gap={50}
-        mt={{base:"60px", md:'580px',lg:'-12px', sm:'300px'}}
+        // gap={3}
+        // mt={{ base: "60px", md: "40px", lg: "5px", sm: "0px" }}
         flexDir={{ base: "column-reverse", lg: "row" }}
         ml={{ lg: "20px" }}
-        // mt={{md:'100px', sm:'30px'}}
+        mt={"11%"}
       >
         <Box
           maxWidth={{ base: "100%", lg: "40%" }}
           flexDir="column"
           gap="1rem"
-          style={isSmallScreen ? { marginTop: "-32px" } : null}
+          style={isSmallScreen ? { marginTop: "-5px", marginLeft:'15px' } : null}
+          ml={{lg:'50px'}}
         >
           <Heading
             id="user-detail-name"
             fontSize={isSmallScreen ? "xl" : "5xl"}
             fontWeight={"bold"}
-            color={"teal"}
+            color={"rgb(0, 172, 238)"}
           >
             Hi, I am Md Abdul Qadir
           </Heading>
           <Text fontSize={isSmallScreen ? "lg" : "2xl"} fontWeight={"semibold"}>
             F{text} !!
           </Text>
-          <Text fontSize={"xl"} fontWeight={"extrabold"}>
+          <Text fontSize={"xl"} >
             Detail-orientated full-stack web developer, who loves working with
             tech stacks like HTML, CSS, JavaScript, and React, etc. and
             passionate about developing user-friendly web applications. Team
@@ -87,7 +88,7 @@ export const Home = () => {
               onClick={() => {
                 // Open the resume in a new tab
                 window.open(
-                  "https://drive.google.com/file/d/10LULZvVQnCleQXTGR8Ie65bKWkjpeeI0/view?usp=sharing",
+                  "https://drive.google.com/file/d/1M-rXFMO-O_nrT32l0ZAJa1H-iU3tI2Ub/view?usp=sharing",
                   "_blank"
                 );
 
@@ -101,7 +102,12 @@ export const Home = () => {
                 document.body.removeChild(link);
               }}
             >
-             <span>Click!</span><span>Resume</span>
+              <span>
+                Click !!
+              </span>
+              <span>
+                Resume 
+              </span>
             </Button>
 
             <a
@@ -113,7 +119,7 @@ export const Home = () => {
                 as={FaGithub}
                 boxSize={8}
                 color="gray.600"
-                _hover={{ color: "teal.500" }}
+                _hover={{ color: "rgb(0, 172, 238)" }}
               />
             </a>
             <a
@@ -125,30 +131,29 @@ export const Home = () => {
                 as={FaLinkedin}
                 boxSize={8}
                 color="gray.600"
-                _hover={{ color: "teal.500" }}
+                _hover={{ color: "rgb(0, 172, 238)" }}
               />
             </a>
           </HStack>
         </Box>
+
         <Box
-          style={isSmallScreen ? { marginTop: "190px" } : null}
-          mt={{ md: "50px" }}
+          style={isSmallScreen ? { marginTop: "50px" } : null}
         >
           <Image
             className="home-img"
             src={homeImage}
             style={
               isSmallScreen
-                ? { maxWidth: "100%" }
+                ? { maxWidth: "90%" }
                 : isMediumScreen
-                ? { maxWidth: "70%" }
+                ? { maxWidth: "20%" }
                 : null
             }
-            ml={{md:'80px'}}
-            // mt={{md:'20px'}}
           ></Image>
         </Box>
       </Flex>
     </div>
   );
 };
+

@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import profileImage from "../assets/abdulreminpic.jpeg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2500 });
+  }, []);
+
   return (
-    <>
-      {/* <Box> */}
+    <Box>
       <Text
         fontSize={{ base: "3xl", md: "4xl" }}
         fontWeight="600"
         textAlign="center"
-        id="about"
-        className="about section"
-        mt={{ base: "200px" }}
-        // mt={'0.001px'}
+        className="about-section"
+        mt={{ base: "200px", lg: "200px" }}
       >
         About Me
       </Text>
@@ -23,21 +26,19 @@ const About = () => {
         justify="center"
         align="center"
         width="100%"
-        id="about"
         height={{ base: "auto", md: "60vh", lg: "55vh" }}
-        mt={{ lg: "-20px" }}
+        mt={{ lg: "-10px" }}
         gap={{ lg: "-100" }}
       >
         <Box
-          data-aos="fade-right"
           width={{ base: "100%", md: "50%", lg: "35%" }}
           marginY={{ base: "20px", md: 0 }}
+          data-aos="fade-down-right"
         >
           <Image
-            className="home-img"
+            className="home-img1"
             margin="auto"
-            border="2px solid grey"
-            borderRadius="50%"
+            borderRadius="34% 66% 32% 68% / 54% 36% 64% 46%"
             w={{ base: 200, md: 300 }}
             h={{ base: 200, md: 300 }}
             src={profileImage}
@@ -51,9 +52,10 @@ const About = () => {
           alignContent="center"
           width={{ base: "100%", sm: "90%", md: "50%", lg: "50%" }}
           fontSize={{ base: "1rem", md: "1.3rem" }}
-          data-aos="fade-left"
         >
-          <Text id="user-detail-intro">
+          <Text id="user-detail-intro" 
+          data-aos="fade-down-right"
+          >
             Experienced Full Stack Web Developer with expertise in JavaScript
             and the MERN stack. Skilled in RESTful API development and efficient
             MongoDB database modeling, translating project requirements into
@@ -66,7 +68,7 @@ const About = () => {
           </Text>
         </Box>
       </Flex>
-    </>
+    </Box>
   );
 };
 
