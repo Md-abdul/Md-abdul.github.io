@@ -73,8 +73,6 @@
   transform: rotateX(-90deg);
 }
 
-
-
 /*  animated infinte hovere effect       */
 
 @keyframes animateImage {
@@ -98,3 +96,4 @@
 .home-img {
   animation: animateImage 6s infinite;
 }
+

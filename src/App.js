@@ -8,67 +8,80 @@ import Contact from "./components/Contact";
 import GithubStatus from "./components/GithubStatus";
 import Education from "./components/Eduaction";
 import Footer from "./components/Footer";
+
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Home />
-      <hr style={{
+      <hr
+        style={{
           width: "70%",
           height: "5px",
           background: "linear-gradient(to right, #007bff, #00ff00, #ff0000)",
           border: "none",
-          marginTop:'120px',
-          marginLeft:'15%',
-          marginBottom:'-120px'
-        }}/>
+          marginTop: "120px",
+          marginLeft: "15%",
+          marginBottom: "-120px",
+        }}
+      />
       <About />
-      <hr style={{
+      <hr
+        style={{
           width: "70%",
           height: "5px",
           background: "linear-gradient(to right, #007bff, #00ff00, #ff0000)",
           border: "none",
-          marginTop:'120px',
-          marginLeft:'15%'
-        }}/>
+          marginTop: "120px",
+          marginLeft: "15%",
+        }}
+      />
       <Skill />
-      <hr style={{
+      <hr
+        style={{
           width: "70%",
           height: "5px",
           background: "linear-gradient(to right, #007bff, #00ff00, #ff0000)",
           border: "none",
-          marginTop:'120px',
-          marginLeft:'15%'
-        }}/>
+          marginTop: "120px",
+          marginLeft: "15%",
+        }}
+      />
       <Projects />
-      <hr style={{
+      <hr
+        style={{
           width: "70%",
           height: "5px",
           background: "linear-gradient(to right, #007bff, #00ff00, #ff0000)",
           border: "none",
-          marginTop:'120px',
-          marginLeft:'15%'
-        }}/>
+          marginTop: "120px",
+          marginLeft: "15%",
+        }}
+      />
       <Education />
-      <hr style={{
+      <hr
+        style={{
           width: "70%",
           height: "5px",
           background: "linear-gradient(to right, #007bff, #00ff00, #ff0000)",
           border: "none",
-          marginTop:'120px',
-          marginLeft:'15%'
-        }}/>
+          marginTop: "120px",
+          marginLeft: "15%",
+        }}
+      />
       <GithubStatus />
-      <hr style={{
+      <hr
+        style={{
           width: "70%",
           height: "5px",
           background: "linear-gradient(to right, #007bff, #00ff00, #ff0000)",
           border: "none",
-          marginTop:'120px',
-          marginLeft:'15%'
-        }}/>
+          marginTop: "120px",
+          marginLeft: "15%",
+        }}
+      />
       <Contact />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

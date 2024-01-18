@@ -1,8 +1,7 @@
 import "../style/home.css";
-import { AiOutlineDownload } from "react-icons/ai";
 import Md_Abdul_Qadir_Resume from "../resume/Md_Abdul_Qadir_Resume.pdf.pdf";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Heading,
   Flex,
@@ -22,6 +21,7 @@ export const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isSmallScreen] = useMediaQuery("(max-width: 767px)");
   const [isMediumScreen] = useMediaQuery("(max-width: 950px)");
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,7 +41,7 @@ export const Home = () => {
   }, [currentIndex]);
 
   return (
-    <div>
+    <>
       <Flex
         // h={{ base: "80vh", lg: "100vh" }}
         mb={-20}
@@ -58,8 +58,10 @@ export const Home = () => {
           maxWidth={{ base: "100%", lg: "40%" }}
           flexDir="column"
           gap="1rem"
-          style={isSmallScreen ? { marginTop: "-5px", marginLeft:'15px' } : null}
-          ml={{lg:'50px'}}
+          style={
+            isSmallScreen ? { marginTop: "-5px", marginLeft: "15px" } : null
+          }
+          ml={{ lg: "50px" }}
         >
           <Heading
             id="user-detail-name"
@@ -72,7 +74,7 @@ export const Home = () => {
           <Text fontSize={isSmallScreen ? "lg" : "2xl"} fontWeight={"semibold"}>
             F{text} !!
           </Text>
-          <Text fontSize={"xl"} >
+          <Text fontSize={"xl"}>
             Detail-orientated full-stack web developer, who loves working with
             tech stacks like HTML, CSS, JavaScript, and React, etc. and
             passionate about developing user-friendly web applications. Team
@@ -102,12 +104,8 @@ export const Home = () => {
                 document.body.removeChild(link);
               }}
             >
-              <span>
-                Click !!
-              </span>
-              <span>
-                Resume 
-              </span>
+              <span>Click !!</span>
+              <span>Resume</span>
             </Button>
 
             <a
@@ -138,6 +136,7 @@ export const Home = () => {
         </Box>
 
         <Box
+          ref={containerRef}
           style={isSmallScreen ? { marginTop: "50px" } : null}
         >
           <Image
@@ -153,7 +152,6 @@ export const Home = () => {
           ></Image>
         </Box>
       </Flex>
-    </div>
+    </>
   );
 };
-

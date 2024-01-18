@@ -35,7 +35,7 @@ const Education = () => {
           />
           <div className="text-box" data-aos="zoom-in">
             <h1>Full Stack Web Development</h1>
-            <small>Masai School(Bengluru)</small>
+            <small>Masai School(Bengaluru)</small>
             <p>November 2022 - October 2023</p>
             <span className="left-container-arrow"></span>
           </div>
