@@ -11,7 +11,6 @@ import alphafinence from "../assets/alphafinence.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 const ProjectCard = (props) => {
   const {
     imageSrc,
@@ -31,7 +30,7 @@ const ProjectCard = (props) => {
       mt={{ base: "25px", lg: "15px", md: "15px", sm: "50px" }}
       borderRadius={"25px"}
       textAlign="center"
-      // 
+      //
       data-aos="flip-right"
     >
       <Box
@@ -43,8 +42,8 @@ const ProjectCard = (props) => {
           <Image
             src={imageSrc}
             alt={projectTitle}
-            boxShadow =  "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset"
-            // boxShadow=" inset 0 0 0.5px 1px hsla(0, 0%,  
+            boxShadow="rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset"
+            // boxShadow=" inset 0 0 0.5px 1px hsla(0, 0%,
             // 100%, 0.075),
             // /* shadow ring 👇 */
             // 0 0 0 1px hsla(0, 0%, 0%, 0.05),
@@ -113,10 +112,9 @@ const ProjectCard = (props) => {
 };
 
 const Projects = () => {
-
   useEffect(() => {
     AOS.init({ duration: 2500 });
-  }, [])
+  }, []);
 
   return (
     <section id="projects">
@@ -142,7 +140,6 @@ const Projects = () => {
         marginRight={"10%"}
         gap={{ base: "15px", lg: "20px", md: "15px", sm: "15px" }}
         mt={35}
-        
       >
         <ProjectCard
           imageSrc={peppfry}
@@ -152,6 +149,24 @@ const Projects = () => {
           projectType="Solo Project"
           githubLink="https://github.com/Md-abdul/-kingly-stitch-4286"
           deployedLink="https://snazzy-narwhal-7e8e12.netlify.app/"
+        />
+        <ProjectCard
+          imageSrc={briks99}
+          projectTitle="Briks 99"
+          projectDescription="Briks99 is an Indian online real estate marketplace which is a subsidiary of Zillow. It facilitates buyers and renters to find homes and neighborhoods across the United States through recommendations, "
+          techStack="html, css, javascript, redux, react, chakra ui"
+          projectType="Team Project"
+          githubLink="https://github.com/Md-abdul/enormous-library-3081"
+          deployedLink="https://stalwart-fairy-7587d7.netlify.app/"
+        />
+        <ProjectCard
+          imageSrc={foodifinder}
+          projectTitle="Foodie Finder"
+          projectDescription="FoodieFinder is a comprehensive food delivery and e-commerce platform that offers a wide variety of food options, including fast food, salads, breakfast items, and much more. Users can easily explore, order, and purchase their favorite dishes."
+          techStack="html, css, javascript"
+          projectType="Team Project"
+          githubLink="https://github.com/Md-abdul/dark-van-7997"
+          deployedLink="https://dark-van-7997-foodie-finder-abdul.netlify.app/"
         />
         <ProjectCard
           imageSrc={learnifi}
@@ -171,24 +186,7 @@ const Projects = () => {
           githubLink="https://github.com/Md-abdul/Trello"
           deployedLink="https://friendly-klepon-acb72b.netlify.app/"
         />
-        <ProjectCard
-          imageSrc={foodifinder}
-          projectTitle="Foodie Finder"
-          projectDescription="FoodieFinder is a comprehensive food delivery and e-commerce platform that offers a wide variety of food options, including fast food, salads, breakfast items, and much more. Users can easily explore, order, and purchase their favorite dishes."
-          techStack="html, css, javascript"
-          projectType="Team Project"
-          githubLink="https://github.com/Md-abdul/dark-van-7997"
-          deployedLink="https://dark-van-7997-foodie-finder-abdul.netlify.app/"
-        />
-        <ProjectCard
-          imageSrc={briks99}
-          projectTitle="Briks 99"
-          projectDescription="Briks99 is an Indian online real estate marketplace which is a subsidiary of Zillow. It facilitates buyers and renters to find homes and neighborhoods across the United States through recommendations, "
-          techStack="html, css, javascript, redux, react, chakra ui"
-          projectType="Team Project"
-          githubLink="https://github.com/Md-abdul/enormous-library-3081"
-          deployedLink="https://stalwart-fairy-7587d7.netlify.app/"
-        />
+
         <ProjectCard
           imageSrc={techprob}
           projectTitle="Tech Probe"
