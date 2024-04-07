@@ -64,7 +64,7 @@ const Education = () => {
             <small>Gomia Inter Collage, Swang</small>
             <p>April 2018 - April 2020</p>
             {/* <span className="left-container-arrow"></span> */}
-            <span className="right-container-arrow"></span>
+            <span className="left-container-arrow"></span>
           </div>
         </div>
 
