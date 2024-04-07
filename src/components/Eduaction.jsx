@@ -28,7 +28,7 @@ const Education = () => {
         Education
       </Text>
       <div className="timeline">
-        <div className="container left-container" >
+        <div className="container left-container">
           <img
             src="https://st2.depositphotos.com/47577860/46208/v/450/depositphotos_462081796-stock-illustration-graduation-university-ceremony-icon.jpg"
             alt=""
@@ -41,20 +41,20 @@ const Education = () => {
           </div>
         </div>
 
-        {/* <div className="container right-container">
+        <div className="container right-container">
           <img
             src="https://st2.depositphotos.com/47577860/46208/v/450/depositphotos_462081796-stock-illustration-graduation-university-ceremony-icon.jpg"
             alt=""
           />
           <div className="text-box">
-            <h1>B.A</h1>
+            <h1>B.A (english honours)</h1>
             <small>Binod Bihari Mahto Koyalanchal University, Dhanbad</small>
-            <p>August 2020 - Semtmber 2023</p>
+            <p>August 2020 - September 2023</p>
             <span className="right-container-arrow"></span>
           </div>
-        </div> */}
+        </div>
 
-        <div className="container right-container">
+        <div className="container left-container">
           <img
             src="https://st2.depositphotos.com/47577860/46208/v/450/depositphotos_462081796-stock-illustration-graduation-university-ceremony-icon.jpg"
             alt=""
@@ -68,7 +68,7 @@ const Education = () => {
           </div>
         </div>
 
-        <div className="container left-container">
+        <div className="container right-container">
           <img
             src="https://st2.depositphotos.com/47577860/46208/v/450/depositphotos_462081796-stock-illustration-graduation-university-ceremony-icon.jpg"
             alt=""
@@ -78,7 +78,7 @@ const Education = () => {
             <small>Loyola School, Gomia</small>
             <p>April 2008 - April 2018</p>
             {/* <span className="right-container-arrow"></span> */}
-            <span className="left-container-arrow"></span>
+            <span className="right-container-arrow"></span>
           </div>
         </div>
       </div>
