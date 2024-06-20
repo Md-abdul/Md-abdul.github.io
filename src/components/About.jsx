@@ -1,3 +1,4 @@
+// 
 import React, { useEffect } from "react";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import profileImage from "../assets/abdulreminpic.jpeg";
