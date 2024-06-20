@@ -1,5 +1,14 @@
-import React, { useEffect } from "react";
-import { Box, Heading, Text, Flex, Button, Image } from "@chakra-ui/react";
+import React, { useState, useEffect } from "react";
+import {
+  Box,
+  Heading,
+  Text,
+  Flex,
+  Button,
+  Image,
+  SimpleGrid,
+} from "@chakra-ui/react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import peppfry from "../assets/peppfry.png";
 import learnifi from "../assets/Learnifi.png";
@@ -8,8 +17,83 @@ import briks99 from "../assets/briks99.png";
 import techprob from "../assets/techprob.png";
 import trello from "../assets/trellow.png";
 import alphafinence from "../assets/alphafinence.png";
+import apnaShop from "../assets/apna shop.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+const projects = [
+  {
+    imageSrc: apnaShop,
+    projectTitle: "Apna Shop",
+    projectDescription:
+      "Apna Shop is a e-commerce website that allows users to browse, search, and purchase a wide range of products. where administrators can manage products and users. The website is fully responsive",
+    techStack: "React-js Talwind Css JavaScript, HTML, CSS Node-js Express ",
+    githubLink: "https://github.com/Md-abdul/Apna-Shop",
+    deployedLink: "https://apna-shop1.netlify.app/",
+    projectType: "Solo Project",
+  },
+  {
+    imageSrc: briks99,
+    projectTitle: "RentHaven",
+    projectDescription:
+      "RentHaven is an Indian online real estate marketplace which is a subsidiary of Zillow. It facilitates buyers and renters to find homes and neighborhoods across the United States through recommendations, ",
+    techStack: "html, css, javascript, redux, react, chakra ui",
+    projectType: "Team Project",
+    githubLink: "https://github.com/Md-abdul/RentHaven",
+    deployedLink: "https://stalwart-fairy-7587d7.netlify.app/",
+  },
+  {
+    imageSrc: peppfry,
+    projectTitle: "Peppfry clone",
+    projectDescription:
+      "pepperfry is an e-commerce application for buying and selling furniture products online. Our platform provides a wide range of furniture products, from sofas and chairs to beds and tables",
+    techStack: "html, css, javascript",
+    projectType: "Solo Project",
+    githubLink: "https://github.com/Md-abdul/-kingly-stitch-4286",
+    deployedLink: "https://snazzy-narwhal-7e8e12.netlify.app/",
+  },
+  {
+    imageSrc: foodifinder,
+    projectTitle: "Foodie Finder",
+    projectDescription:
+      "FoodieFinder is a comprehensive food delivery and e-commerce platform that offers a wide variety of food options, including fast food, salads, breakfast items, and much more. Users can easily explore, order, and purchase their favorite dishes.",
+    techStack: "html, css, javascript",
+    projectType: "Team Project",
+    githubLink: "https://github.com/Md-abdul/dark-van-7997",
+    deployedLink: "https://dark-van-7997-foodie-finder-abdul.netlify.app/",
+  },
+  {
+    imageSrc: learnifi,
+    projectTitle: "Learni-fi clone",
+    projectDescription:
+      "Learni fi is a data management application. Where users can add any college and courses, and here also students take these courses to acquire more skills.",
+    techStack: "html, css, javascript, redux, react, chakra ui",
+    projectType: "Solo Project",
+    githubLink: "https://github.com/Md-abdul/brief-battle-8574",
+    deployedLink: "https://coruscating-sable-f60edd.netlify.app/",
+  },
+  {
+    imageSrc: trello,
+    projectTitle: "Trello",
+    projectDescription:
+      "The Trello project is a comprehensive project management system designed to facilitate efficient project, task, team, and user management. The application includes an admin section .",
+    techStack:
+      "html, css, javascript, angular, react, Talwind , Styled-Components",
+    projectType: "Solo Project",
+    githubLink: "https://github.com/Md-abdul/Trello",
+    deployedLink: "https://friendly-klepon-acb72b.netlify.app/",
+  },
+  {
+    imageSrc: techprob,
+    projectTitle: "Tech Probe",
+    projectDescription:
+      "AI-powered self-interview preparation platform. This platform will use the magic of AI and language processing to simulate real interview scenarios. It will give users feedback on their responses and provide .",
+    techStack: "TypeScript, JavaScript, Java, HTML, CSS",
+    projectType: "Team Project",
+    githubLink: "https://github.com/Md-abdul/TechProbe",
+    deployedLink: "https://tech-probe-interview-prep.netlify.app/",
+  },
+];
 
 const ProjectCard = (props) => {
   const {
@@ -21,36 +105,27 @@ const ProjectCard = (props) => {
     deployedLink,
     projectType,
   } = props;
-  //box-shadow: ;
+
   return (
     <Box
       className="project-card"
-      p={4}
-      // border={"1px solid"}
+      p={2}
       mt={{ base: "25px", lg: "15px", md: "15px", sm: "50px" }}
       borderRadius={"25px"}
       textAlign="center"
-      //
       data-aos="flip-right"
+      boxShadow="-2px -2px 5px #fff, 2px 2px 5px #babecc"
     >
       <Box
         borderRadius={"10px"}
         p={2}
-        boxShadow="-2px -2px 5px #fff, 2px 2px 5px #babecc"
+        boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
       >
         <Box w={"100%"}>
           <Image
             src={imageSrc}
             alt={projectTitle}
             boxShadow="rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset"
-            // boxShadow=" inset 0 0 0.5px 1px hsla(0, 0%,
-            // 100%, 0.075),
-            // /* shadow ring 👇 */
-            // 0 0 0 1px hsla(0, 0%, 0%, 0.05),
-            // /* multiple soft shadows 👇 */
-            // 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
-            // 0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
-            // 0 3.5px 6px hsla(0, 0%, 0%, 0.09)"
             borderRadius={10}
           />
         </Box>
@@ -91,6 +166,7 @@ const ProjectCard = (props) => {
               href={githubLink}
               target="_blank"
               className="project-github-link"
+              color="teal.500"
               mb={5}
             >
               <FaGithub /> GitHub
@@ -100,6 +176,7 @@ const ProjectCard = (props) => {
               href={deployedLink}
               target="_blank"
               className="project-deployed-link"
+              color="teal.500"
               mb={5}
             >
               <FaExternalLinkAlt /> Deployed
@@ -112,9 +189,45 @@ const ProjectCard = (props) => {
 };
 
 const Projects = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsPerSlide, setItemsPerSlide] = useState(2);
+  const [transitioning, setTransitioning] = useState(false);
+
   useEffect(() => {
     AOS.init({ duration: 2500 });
+    const updateItemsPerSlide = () => {
+      setItemsPerSlide(window.innerWidth < 768 ? 1 : 2);
+    };
+
+    updateItemsPerSlide();
+    window.addEventListener("resize", updateItemsPerSlide);
+    return () => window.removeEventListener("resize", updateItemsPerSlide);
   }, []);
+
+  const handlePrev = () => {
+    if (!transitioning) {
+      setTransitioning(true);
+      setTimeout(() => {
+        const newIndex = Math.max(0, currentIndex - itemsPerSlide);
+        setCurrentIndex(newIndex);
+        setTransitioning(false);
+      }, 500); // Delay to allow the animation to complete
+    }
+  };
+
+  const handleNext = () => {
+    if (!transitioning) {
+      setTransitioning(true);
+      setTimeout(() => {
+        const newIndex = Math.min(
+          currentIndex + itemsPerSlide,
+          projects.length - itemsPerSlide
+        );
+        setCurrentIndex(newIndex);
+        setTransitioning(false);
+      }, 500); // Delay to allow the animation to complete
+    }
+  };
 
   return (
     <section id="projects">
@@ -128,86 +241,58 @@ const Projects = () => {
         fontWeight="600"
         textAlign="center"
       >
-        Projects
+        Projects 👇
       </Heading>
-      <Flex
-        id="project-container"
-        display={{ base: "block", md: "grid" }} // Use Chakra's responsive design
-        w={"85%"}
-        justifyContent="space-around"
-        gridTemplateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} // Define column layout for different screen sizes
-        marginLeft={"7.8%"}
-        marginRight={"10%"}
-        gap={{ base: "15px", lg: "20px", md: "15px", sm: "15px" }}
-        mt={35}
+      <Box
+        className={`slide-container ${transitioning ? "transitioning" : ""}`}
+        maxW="80%"
+        mx="auto"
+        p={5}
       >
-        <ProjectCard
-          imageSrc={peppfry}
-          projectTitle="Peppfry clone"
-          projectDescription="pepperfry is an e-commerce application for buying and selling furniture products online. Our platform provides a wide range of furniture products, from sofas and chairs to beds and tables"
-          techStack="html, css, javascript"
-          projectType="Solo Project"
-          githubLink="https://github.com/Md-abdul/-kingly-stitch-4286"
-          deployedLink="https://snazzy-narwhal-7e8e12.netlify.app/"
-        />
-        <ProjectCard
-          imageSrc={briks99}
-          projectTitle="Briks 99"
-          projectDescription="Briks99 is an Indian online real estate marketplace which is a subsidiary of Zillow. It facilitates buyers and renters to find homes and neighborhoods across the United States through recommendations, "
-          techStack="html, css, javascript, redux, react, chakra ui"
-          projectType="Team Project"
-          githubLink="https://github.com/Md-abdul/enormous-library-3081"
-          deployedLink="https://stalwart-fairy-7587d7.netlify.app/"
-        />
-        <ProjectCard
-          imageSrc={foodifinder}
-          projectTitle="Foodie Finder"
-          projectDescription="FoodieFinder is a comprehensive food delivery and e-commerce platform that offers a wide variety of food options, including fast food, salads, breakfast items, and much more. Users can easily explore, order, and purchase their favorite dishes."
-          techStack="html, css, javascript"
-          projectType="Team Project"
-          githubLink="https://github.com/Md-abdul/dark-van-7997"
-          deployedLink="https://dark-van-7997-foodie-finder-abdul.netlify.app/"
-        />
-        <ProjectCard
-          imageSrc={learnifi}
-          projectTitle="Learni-fi clone"
-          projectDescription="Learni fi is a data management application. Where users can add any college and courses, and here also students take these courses to acquire more skills."
-          techStack="html, css, javascript, redux, react, chakra ui"
-          projectType="Solo Project"
-          githubLink="https://github.com/Md-abdul/brief-battle-8574"
-          deployedLink="https://coruscating-sable-f60edd.netlify.app/"
-        />
-        <ProjectCard
-          imageSrc={trello}
-          projectTitle="Trello"
-          projectDescription="The Trello project is a comprehensive project management system designed to facilitate efficient project, task, team, and user management. The application includes an admin section ."
-          techStack="html, css, javascript, angular, react, Talwind , Styled-Components"
-          projectType="Solo Project"
-          githubLink="https://github.com/Md-abdul/Trello"
-          deployedLink="https://friendly-klepon-acb72b.netlify.app/"
-        />
-
-        <ProjectCard
-          imageSrc={techprob}
-          projectTitle="Tech Probe"
-          projectDescription="AI-powered self-interview preparation platform. This platform will use the magic of AI and language processing to simulate real interview scenarios. It will give users feedback on their responses and provide ."
-          techStack="TypeScript, JavaScript, Java, HTML, CSS"
-          projectType="Team Project"
-          githubLink="https://github.com/Md-abdul/TechProbe"
-          deployedLink="https://tech-probe-interview-prep.netlify.app/"
-        />
-
-        {/* <ProjectCard
-          imageSrc={alphafinence}
-          projectTitle="Alpha Finence"
-          projectDescription="Lets you see the balance, transactions and invoices for your credit cards. This app simplifies your life. You can for instance: Get notifications of important events, purchases or if you reached your spending limits."
-          techStack="JavaScript, HTML, CSS"
-          projectType="Team Project"
-          githubLink="https://github.com/Md-abdul/gaping-spring-1880"
-          deployedLink="https://648ff31438df292dda152224--animated-raindrop-fbd2bc.netlify.app/"
-        /> */}
-        {/* Repeat the above code for other projects */}
-      </Flex>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" mt={10}>
+          {projects
+            .slice(currentIndex, currentIndex + itemsPerSlide)
+            .map((project, index) => (
+              <ProjectCard
+                key={index}
+                imageSrc={project.imageSrc}
+                projectTitle={project.projectTitle}
+                projectDescription={project.projectDescription}
+                techStack={project.techStack}
+                githubLink={project.githubLink}
+                deployedLink={project.deployedLink}
+                projectType={project.projectType}
+              />
+            ))}
+        </SimpleGrid>
+      </Box>
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        mt="4"
+        maxW="80%"
+        mx="auto"
+        // p={5}
+      >
+        <Button
+          onClick={handlePrev}
+          leftIcon={<ChevronLeftIcon />}
+          colorScheme="teal"
+          isDisabled={currentIndex === 0 || transitioning}
+        >
+          Previous
+        </Button>
+        <Button
+          onClick={handleNext}
+          rightIcon={<ChevronRightIcon />}
+          colorScheme="teal"
+          isDisabled={
+            currentIndex + itemsPerSlide >= projects.length || transitioning
+          }
+        >
+          Next
+        </Button>
+      </Box>
     </section>
   );
 };

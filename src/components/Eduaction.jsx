@@ -25,7 +25,7 @@ const Education = () => {
         textAlign="center"
         mt={150}
       >
-        Education
+        Education 👇
       </Text>
       <div className="timeline">
         <div className="container left-container">

@@ -19,7 +19,7 @@ const GithubStats = () => {
         fontWeight="600"
         textAlign="center"
       >
-        GitHub Stats
+        GitHub Stats 👇
       </Text>
       <Flex
         flexDirection={{ base: "column", md: "row" }}

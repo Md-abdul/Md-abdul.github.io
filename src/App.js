@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import GithubStatus from "./components/GithubStatus";
 import Education from "./components/Eduaction";
 import Footer from "./components/Footer";
+import { MiniProjects } from "./components/MiniProjects";
 
 function App() {
   return (
@@ -48,6 +49,17 @@ function App() {
         }}
       />
       <Projects />
+      <hr
+        style={{
+          width: "70%",
+          height: "5px",
+          background: "linear-gradient(to right, #007bff, #00ff00, #ff0000)",
+          border: "none",
+          marginTop: "120px",
+          marginLeft: "15%",
+        }}
+      />
+      <MiniProjects/>
       <hr
         style={{
           width: "70%",
