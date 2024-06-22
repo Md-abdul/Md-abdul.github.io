@@ -15,11 +15,26 @@ import miniAdmin from "../assets/mini-admin.png";
 import reduxmini from "../assets/redux-mini.png";
 import tictoe from "../assets/tic-toe-mini.png";
 import weather from "../assets/wether-mini.png";
+import minilms from "../assets/frontend-mini-lms.png"
+import saviour from "../assets/saviour-landing-page.png"
+import timemanger from "../assets/time-manager.png"
 import "../style/MiniProjects.css"; 
 import AOS from "aos";
 import "aos/dist/aos.css"; 
-
+//
 const projects = [
+  {
+    image: minilms,
+    name: "Mini LMS",
+    github: "https://github.com/Md-abdul/frontend-mini-lms",
+    deployment: "https://mini-lms.netlify.app/",
+  },
+  {
+    image: saviour,
+    name: "Saviour Landing Page",
+    github: "https://github.com/Md-abdul/Md-abdul-Frontend-Developer",
+    deployment: "https://65f1b2ff68d5a72386f79e15--celebrated-syrniki-cf6349.netlify.app/",
+  },
   {
     image: miniAdmin,
     name: "Mini Admin",
@@ -33,6 +48,12 @@ const projects = [
     deployment: "https://reduxmini.netlify.app/",
   },
   {
+    image: weather,
+    name: "Weather App",
+    github: "https://github.com/Md-abdul/weather-app",
+    deployment: "https://weather5698.netlify.app/",
+  },
+  {
     image: tictoe,
     name: "Tic-tac-toe",
     github: "https://github.com/Md-abdul/Tic-Tac-Toe-Game",
@@ -40,11 +61,12 @@ const projects = [
       "https://64ce0ce974696f2b984b9c3b--sparkling-bunny-27d3f8.netlify.app/",
   },
   {
-    image: weather,
-    name: "Weather App",
-    github: "https://github.com/Md-abdul/weather-app",
-    deployment: "https://weather5698.netlify.app/",
+    image: timemanger,
+    name: "Time Manger",
+    github: "https://github.com/Md-abdul/Time-Manager",
+    deployment: "https://65658ac68476ed3408a37038--subtle-speculoos-63396f.netlify.app/",
   },
+  
 ];
 
 export const MiniProjects = () => {
@@ -100,7 +122,7 @@ export const MiniProjects = () => {
         fontWeight="600"
         textAlign="center"
       >
-        Mini Projects 👇
+       Mini Projects 👇
       </Heading>
       <Box
         className={`slide-container ${transitioning ? "transitioning" : ""}`}

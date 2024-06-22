@@ -46,7 +46,7 @@ const Education = () => {
             src="https://st2.depositphotos.com/47577860/46208/v/450/depositphotos_462081796-stock-illustration-graduation-university-ceremony-icon.jpg"
             alt=""
           />
-          <div className="text-box">
+          <div className="text-box" data-aos="zoom-in">
             <h1>B.A (english honours)</h1>
             <small>Binod Bihari Mahto Koyalanchal University, Dhanbad</small>
             <p>August 2020 - September 2023</p>

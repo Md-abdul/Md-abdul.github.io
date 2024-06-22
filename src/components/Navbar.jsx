@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../style/Nav.css";
 import { useColorMode, Button, Link } from "@chakra-ui/react";
@@ -16,8 +16,30 @@ function Navbar() {
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  const handleScroll = () => {
+    if(window.pageYOffset > 400){
+      setShowScrollButton(true)
+    }
+    else{
+      setShowScrollButton(false)
+    }
+  }
+
+  const scrollToTop = () => {
+    window.scrollTo({top: 0, behavior:'smooth'});
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
+    <>
     <header id="nav-menu" data-theme={isDarkMode ? "dark" : "light"}>
       <div>
         <h1
@@ -135,6 +157,20 @@ function Navbar() {
         <FaBars />
       </button>
     </header>
+
+    {showScrollButton && (<Button onClick={scrollToTop}
+          position="fixed"
+          bottom="4"
+          right="4"
+          backgroundColor="#046bd2"
+          color="white"
+          borderRadius="full"
+          zIndex="999"
+          size="lg"
+          p="2"
+          fontSize="xl"
+          boxShadow="lg">👆</Button>)}
+    </>
   );
 }
 
