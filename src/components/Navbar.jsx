@@ -162,7 +162,7 @@ function Navbar() {
           position="fixed"
           bottom="4"
           right="4"
-          backgroundColor="#046bd2"
+          backgroundColor="rgb(0, 172, 238)"
           color="white"
           borderRadius="full"
           zIndex="999"
