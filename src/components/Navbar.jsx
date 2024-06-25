@@ -109,14 +109,14 @@ function Navbar() {
           onClick={() => {
             // Open the resume in a new tab
             window.open(
-              "https://drive.google.com/file/d/1M-rXFMO-O_nrT32l0ZAJa1H-iU3tI2Ub/view?usp=sharing",
+              "https://drive.google.com/file/d/1nwWQ_aJ7S4eMDZyVvb6dC55Azzg5V1oK/view?usp=sharing",
               "_blank"
             );
 
             // Download the resume
             const link = document.createElement("a");
             link.href = Md_Abdul_Qadir_Resume;
-            link.setAttribute("download", "Md_Abdul_Qadir_Resume.pdf");
+            link.setAttribute("download", "Md_Abdul_Qadir_Resume1.pdf.pdf");
             link.style.display = "none";
             document.body.appendChild(link);
             link.click();
