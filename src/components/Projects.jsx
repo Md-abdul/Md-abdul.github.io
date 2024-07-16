@@ -40,7 +40,7 @@ const projects = [
     techStack: "html, css, javascript, redux, react, chakra ui",
     projectType: "Team Project",
     githubLink: "https://github.com/Md-abdul/RentHaven",
-    deployedLink: "https://stalwart-fairy-7587d7.netlify.app/",
+    deployedLink: "https://renthaven.netlify.app/",
   },
   {
     imageSrc: peppfry,
