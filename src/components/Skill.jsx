@@ -11,7 +11,7 @@ import mongooseImg from "../assets/mongoose-1.svg";
 import chakraUIImg from "../assets/chakraui_logo.png";
 import gitImg from "../assets/github.svg";
 import postmanImg from "../assets/postman.svg";
-import angular from "../assets/angular.png";
+import nextjs from "../assets/next-js.png";
 import axios from "../assets/axios.png";
 import routerDom from "../assets/react-router-dom.png";
 import typeScript from "../assets/typescript-2.svg";
@@ -101,7 +101,7 @@ const skillsData = [
   { name: "CSS", icon: cssImg },
   { name: "JavaScript", icon: javascriptImg },
   { name: "TypeScript", icon: typeScript },
-  { name: "Angular", icon: angular },
+  { name: "Next JS", icon: nextjs },
   { name: "React", icon: reactImg },
   { name: "Redux", icon: reduxImg },
   { name: "React-Router-Dom", icon: routerDom },

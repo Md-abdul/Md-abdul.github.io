@@ -83,21 +83,22 @@ export const Home = () => {
             company growth.
           </Text>
 
-          <HStack mt={4} spacing={4} justify={"center"}>
+          <HStack mt={4} spacing={4} justify={"center"} >
             <Button
               id="resume-button-2"
+              
               className="nav-link resume"
               onClick={() => {
                 // Open the resume in a new tab
                 window.open(
-                  "https://drive.google.com/file/d/1nwWQ_aJ7S4eMDZyVvb6dC55Azzg5V1oK/view?usp=sharing",
+                  "https://drive.google.com/file/d/1IOgkYV96Urv92dqLiNaG-uJVVblj_mb3/view?usp=sharing",
                   "_blank"
                 );
 
                 // Download the resume
                 const link = document.createElement("a");
                 link.href = Md_Abdul_Qadir_Resume;
-                link.setAttribute("download", "Md_Abdul_Qadir_Resume1.pdf.pdf");
+                link.setAttribute("download", "Md_Abdul_Resume.pdf");
                 link.style.display = "none";
                 document.body.appendChild(link);
                 link.click();
@@ -116,6 +117,7 @@ export const Home = () => {
               <Icon
                 as={FaGithub}
                 boxSize={8}
+                
                 color="gray.600"
                 _hover={{ color: "rgb(0, 172, 238)" }}
               />
