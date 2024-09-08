@@ -1,5 +1,5 @@
 import "../style/home.css";
-import Md_Abdul_Qadir_Resume from "../resume/Md_Abdul_Qadir_Resume.pdf.pdf";
+import Md_Abdul_Qadir_Resume from "../resume/Md_Abdul_Resume.pdf";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import React, { useEffect, useRef, useState } from "react";
 import {

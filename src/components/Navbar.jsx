@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../style/Nav.css";
 import { useColorMode, Button, Link } from "@chakra-ui/react";
-import Md_Abdul_Qadir_Resume from "../resume/Md_Abdul_Qadir_Resume.pdf.pdf";
+import Md_Abdul_Qadir_Resume from "../resume/Md_Abdul_Resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 import { PiSunLight } from "react-icons/pi";
